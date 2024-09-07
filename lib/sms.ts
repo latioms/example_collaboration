@@ -1,6 +1,7 @@
 // lib/SMS.ts
 const SMS_USER_ID = process.env.SMS_USER_ID;
 const SMS_PASSWORD = process.env.SMS_PASSWORD;
+
 export const sendSMS = async (phone: string, message: string) => {
     const response = await fetch('https://mboadeals.net/api/v1/sms/sendsms', {
       method: 'POST',
