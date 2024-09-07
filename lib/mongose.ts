@@ -12,7 +12,9 @@ if (!process.env.MONGODB_URI) {
 }
 
 if (process.env.NODE_ENV === "development") {
-  if (!(global as any)._mongoClientPromise) {
+  type NewType = any;
+
+  if (!(global as NewType)._mongoClientPromise) {
     client = new MongoClient(uri, options);
     console.log("Connected successfully to MongoDB");
     (global as any)._mongoClientPromise = client.connect();
