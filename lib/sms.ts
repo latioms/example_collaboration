@@ -13,7 +13,7 @@ export const sendSMS = async (phone: string, message: string) => {
         password: SMS_PASSWORD ,
         message: message,
         phone_str: phone,
-        sender_name: 'HUBLOTS',
+        sender_name: 'Vision Pub',
       }),
     });
   
